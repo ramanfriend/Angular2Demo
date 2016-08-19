@@ -1,0 +1,66 @@
+<html>
+
+  <head>
+    <title>Angular 2 QuickStart</title>
+
+    <!-- 1. Load libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+      <script src="node_modules/angular2/bundles/http.dev.js"></script>
+       
+
+<!--2. Configure SystemJS -->
+    <script>
+      System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/boot')
+            .then(null, console.error.bind(console));
+    </script>
+     
+     <!-- Favicon-->
+    <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+
+    <!-- Web Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+    <!-- Vendor CSS-->
+    <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/libs/animate/animate.css">
+    <!--<link rel="stylesheet" href="assets/libs/nivo-lightbox/nivo-lightbox.css">-->
+    <!--<link rel="stylesheet" href="assets/libs/nivo-lightbox/themes/default/default.css">-->
+
+    <!-- Theme CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  </head>
+<base href="/">
+   <!--3. Display the application -->
+   <body>
+    <div id="preloaderKDZ"></div>
+      <my-app></my-app>
+    <!-- .site-->
+
+    <!-- Vendor jQuery-->
+    <script type="text/javascript" src="assets/libs/jquery/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="assets/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/libs/smoothscroll/SmoothScroll.js"></script>
+    <!-- Theme Script-->
+    <script type="text/javascript" src="assets/js/js.js"></script>
+  </body>
+
+</html>

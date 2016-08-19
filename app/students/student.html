@@ -1,0 +1,28 @@
+<div class="row" sty>
+            <!-- Contact-->
+            <div class="col-md-12 contact-form-wrapper">
+              <!-- Contact Form-->
+              <form [ngFormModel]="myForm"  (ngSubmit)="onSubmit(myForm.value)" class="contact-form">
+                <div class="field">
+                  <input type="text" name="studentname" placeholder="Student Name" [ngFormControl]="myForm.controls['studentname']">
+                </div>
+                <div class="field">
+                  <input type="text" name="parentname" placeholder="Parent Name" [ngFormControl]="myForm.controls['parentname']">
+                </div>
+                <div class="field">
+                  <input type="text" name="Studentclass" placeholder="Student class" [ngFormControl]="myForm.controls['studentclass']">
+                </div>
+                <div class="field">
+                  <input type="text" name="rollno" placeholder="Roll Number" [ngFormControl]="myForm.controls['rollno']">
+                </div>
+                <div class="field">
+                  <input type="tel" name="phone" placeholder="Phone" [ngFormControl]="myForm.controls['phone']">
+                </div>    
+                 <div class="field">
+                  <input type="text" name="address" placeholder="Address" [ngFormControl]="myForm.controls['address']">
+                </div>                
+                <input type="submit" [disabled]="!myForm.valid"  value="  Submit  " class="submit">
+              </form>
+            </div>
+            
+          </div>
